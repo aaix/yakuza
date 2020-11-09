@@ -1,4 +1,4 @@
-# Yazuka - a remote controlled fork of [Synner](https://github.com/JuxhinDB/synner)
+# Yazuka - a remote controlled version of [Synner](https://github.com/JuxhinDB/synner)
 
 No, i will not ddos someone for you, this is provided for testing and educational purposes.
 
