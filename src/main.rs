@@ -57,7 +57,7 @@ fn main() {
                             };
                             match stream.shutdown(Shutdown::Both) {
                                 Ok(_) => {}
-                                Err(shutdown_error) => {println!("STREAM DC {} NO GOODBYE {}",e,shutdown_error)}
+                                Err(shutdown_error) => {println!("STREAM SHUTDOWN {} NO GOODBYE {}",e,shutdown_error)}
                             }
                             println!("STREAM DC {}",e);
                             break
