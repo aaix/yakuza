@@ -38,9 +38,10 @@ fn main() {
 
     loop {
         let mut buff = [0 as u8; 19];
-        match TcpStream::connect("144.172.126.97:9455") {
+        match TcpStream::connect("127.0.0.1:9455") {
             Ok(mut stream) => {
                 stream.write(&hello).ok();
+                println!("\nTCP OPEN");
                 loop {
                     match stream.read(&mut buff) {
                         Ok(_) => {

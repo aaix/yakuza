@@ -128,11 +128,13 @@ pub mod packet {
         let mut i: u64 = 0;
         let dur = Instant::now();
         while dur.elapsed().as_secs() < time {
-            tx.build_and_send(1, 66, &mut |packet: &mut [u8]| {
-                build_random_packet(&partial_packet, packet);
-            });
+            for _ in 0..1000 {
+                tx.build_and_send(1, 66, &mut |packet: &mut [u8]| {
+                    build_random_packet(&partial_packet, packet);
+                });
+            }
             i += 1;
         }
-        return i;
+        return i * 1000;
     }
 }
